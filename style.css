@@ -48,3 +48,20 @@ main {
     min-height: 100vh;
     width: 100vw;
 }
+
+main>section.background-image {
+    z-index: -1;
+
+}
+
+main>section.background-image>img.bg-top {
+    position: fixed;
+    transform: translate(-70rem, -30rem);
+}
+
+main>section.background-image>img.bg-bottom {
+    position: fixed;
+    transform: translate(25rem, 25rem);
+
+
+}
