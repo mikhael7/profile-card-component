@@ -43,7 +43,7 @@ footer {
 }
 
 * {
-    outline: 1px solid pink;
+    /* outline: 1px solid pink; */
 }
 
 main {
@@ -93,20 +93,39 @@ main>section.card>div.background-card>img {
 
 main>section.card>div.card-body {
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main>section.card>div.card-body>div.profile-image>img {
+    transform: translateY(-4rem);
+    margin-bottom: -4rem;
+    border-radius: 100%;
+    border: 0.25rem solid white;
 }
 
 main>section.card>div.card-body>div.card-title {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    width: 100%;
+    font-size: small;
 }
 
 main>section.card>div.card-body>div.card-title>h1.username {
     color: var(--color-very-dark-desaturated-blue);
+    font-variation-settings: 'wght' var(--font-weight-bold);
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 main>section.card>div.card-body>div.card-title>h2.userage {
     color: var(--color-dark-grayish-blue);
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 main>section.card>div.card-body>div.card-desc {
@@ -115,10 +134,27 @@ main>section.card>div.card-body>div.card-desc {
     color: var(--color-dark-grayish-blue);
 }
 
+main>section.card>div.card-body>div.card-desc>p {
+    margin: 0;
+}
+
 main>section.card>div.card-footer {
-    padding: 1rem;
+    padding: 1rem 2rem;
     font-size: var(--font-size-sm);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    text-align: center;
+}
+
+main>section.card>div.card-footer h2 {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-variation-settings: 'wght' var(--font-weight-bold);
+}
+
+main>section.card>div.card-footer p {
+    margin: 0;
+    color: var(--color-dark-grayish-blue);
+    font-size: smaller;
 }
