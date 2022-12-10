@@ -60,21 +60,38 @@ main {
 main>div.background-image {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    min-width: 100vw;
+    min-height: 100vh;
     position: fixed;
-    width: 100%;
+    justify-content: space-evenly;
 }
 
-main>div.background-image>img.bg-top {
+main>div.background-image>div.container-image-top {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+main>div.background-image>div.container-image-top>img.bg-top {
+    transform: translate(-7.5rem, -7.5rem);
+    max-width: calc(32.5rem / 1.75);
     top: 0;
     left: 0;
-    transform: translate(-7.5rem, -7.5rem);
 }
 
-main>div.background-image>img.bg-bottom {
+main>div.background-image>div.container-image-bottom {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+main>div.background-image>div.container-image-bottom>img.bg-bottom {
+    max-width: calc(32.5rem / 1.75);
+    transform: translate(7.5rem, 7.5rem);
     bottom: 0;
     right: 0;
-    transform: translate(7.5rem, 7.5rem);
 }
 
 main>section.card {
@@ -145,6 +162,7 @@ main>section.card>div.card-footer {
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
+    border-top: 1px solid hsla(0, 0%, 59%, 0.25);
 }
 
 main>section.card>div.card-footer h2 {
@@ -157,4 +175,14 @@ main>section.card>div.card-footer p {
     margin: 0;
     color: var(--color-dark-grayish-blue);
     font-size: smaller;
+}
+
+@media screen and (min-width: 996px) {
+    main>div.background-image>div.container-image-top>img.bg-top {
+        max-width: calc(32.5rem / 1);
+    }
+
+    main>div.background-image>div.container-image-bottom>img.bg-bottom {
+        max-width: calc(32.5rem / 1);
+    }
 }
