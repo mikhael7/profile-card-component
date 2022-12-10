@@ -97,6 +97,10 @@ main>article.card {
     border-radius: var(--border-radius-s);
 }
 
+main>article.card>h1 {
+    display: none;
+}
+
 main>article.card>div.background-card>img {
     border-top-left-radius: var(--border-radius-s);
     border-top-right-radius: var(--border-radius-s);
